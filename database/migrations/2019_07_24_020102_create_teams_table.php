@@ -21,7 +21,6 @@ class CreateTeamsTable extends Migration
             $table->string('facebook')->nullable();
             $table->string('twitter')->nullable();
             $table->string('instagram')->nullable();
-            $table->boolean('is_publish')->default(false);
             $table->timestamps();
         });
     }

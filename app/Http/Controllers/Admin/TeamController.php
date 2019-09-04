@@ -33,7 +33,7 @@ class TeamController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.customize.addteam');
     }
 
     /**
@@ -44,7 +44,33 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if (!$file = $request->file('image')) {
+            Team::create([
+                'name' => $request->name,
+                'title' => $request->title,
+                'facebook' => $request->facebook,
+                'twitter' => $request->twitter,
+                'instagram' => $request->instagram
+            ]);
+            return redirect ('/admin/team') ; 
+        }
+        else {
+            
+            $file = $request->file('image');
+            $ext = $file->getClientOriginalExtension();
+            $filename1 = $request->id.time().".".$ext;            
+            $request->file('image')->storeAs('public/admin/team', $filename1);
+
+            Team::create([
+                'name' => $request->name,
+                'title' => $request->title,
+                'facebook' => $request->facebook,
+                'twitter' => $request->twitter,
+                'instagram' => $request->instagram,             
+                'image' => $filename1
+            ]);
+            return redirect ('/admin/team') ;
+        }
     }
 
     /**
@@ -66,7 +92,8 @@ class TeamController extends Controller
      */
     public function edit($id)
     {
-        //
+        $team = Team::find($id);
+        return view('admin.customize.editteam', compact('team'));
     }
 
     /**
@@ -76,9 +103,37 @@ class TeamController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        if (!$file = $request->file('image')) {
+            Team::where('id','=', $request->id)
+            ->update([
+                'name' => $request->name,
+                'title' => $request->title,
+                'facebook' => $request->facebook,
+                'twitter' => $request->twitter,
+                'instagram' => $request->instagram
+            ]);
+            return redirect ('/admin/team') ; 
+        }
+        else {
+            
+            $file = $request->file('image');
+            $ext = $file->getClientOriginalExtension();
+            $filename1 = $request->id.time().".".$ext;            
+            $request->file('image')->storeAs('public/admin/team', $filename1);
+
+            Team::where('id','=', $request->id)
+            ->update([
+                'name' => $request->name,
+                'title' => $request->title,
+                'facebook' => $request->facebook,
+                'twitter' => $request->twitter,
+                'instagram' => $request->instagram,              
+                'image' => $filename1
+            ]);
+            return redirect ('/admin/team') ;
+        }
     }
 
     /**
@@ -89,6 +144,8 @@ class TeamController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = Team::find($id);
+        $data->delete($data);
+        return redirect('/admin/team');
     }
 }

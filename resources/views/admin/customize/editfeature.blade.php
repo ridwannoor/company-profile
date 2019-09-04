@@ -16,12 +16,13 @@
                         </div>
                         <div class="module-content collapse show" id="content-5">
                             <div class="module-content-inner pb-0">
-                                <form action="/admin/feature/update" method="POST" enctype="multipart/form-data">
-                                    <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-                                    <input type="hidden" name="id" value="{{$feature->id}}" />
-                                    <input type="hidden" name="_method" value="PUT" />
+                                
                                     {{-- <h4 class="has-divider">Elegant Icons</h4> --}}
                                     <div role="tabpanel">
+                                            <form action="/admin/feature/update" method="POST" enctype="multipart/form-data">
+                                                <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                                                <input type="hidden" name="id" value="{{$feature->id}}" />
+                                                <input type="hidden" name="_method" value="PUT" />
                                         <!-- Nav tabs -->
                                         <ul class="nav nav-tabs nav-tabs-theme-3" role="tablist">
                                             <li class="nav-item"><a class="nav-link active" href="#section"
@@ -51,10 +52,7 @@
                                         </ul>
                                         <!-- Tab panes -->
                                         <div class="tab-content">
-
-
-                                            <div role="tabpanel" class="tab-pane active" id="section">
-
+                                            <div role="tabpanel" class="tab-pane active" id="section">                                               
                                                 <fieldset class="fieldset mb-3">
                                                     <div class="form-group form-row avatar">
                                                         <figure class="figure col-lg-2 col-md-3 col-4">
@@ -100,12 +98,18 @@
                                                             class="file-uploader float-left">
                                                     </div>
                                                 </fieldset>
-                                               
+                                                <div class="form-group form-row">
+                                                    <div class="btn-group">
+                                                        <input class="btn btn-primary" type="submit" name="submit"
+                                                            value="Update">
+                                                        <a href="" class="btn btn-warning">Back</a>
+                                                    </div>
+                                                </div>
+                                          
 
                                             </div>
 
-                                            <div role="tabpanel" class="tab-pane" id="section-1">
-
+                                            <div role="tabpanel" class="tab-pane" id="section-1">                                                
                                                 <fieldset class="fieldset mb-3">
                                                     <div class="form-group form-row avatar">
                                                         <figure class="figure col-lg-2 col-md-3 col-4">
@@ -132,17 +136,23 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-group form-row">
-                                                        <label for="title" class="col-sm-2 col-form-label">File
+                                                        <label for="image1" class="col-sm-2 col-form-label">File
                                                             Upload</label>
                                                         <input type="file"  id="image1" name="image1"
                                                             class="file-uploader float-left">
                                                     </div>
                                                 </fieldset>
-                                                
+                                                <div class="form-group form-row">
+                                                    <div class="btn-group">
+                                                        <input class="btn btn-primary" type="submit" name="submit"
+                                                            value="Update">
+                                                        <a href="" class="btn btn-warning">Back</a>
+                                                    </div>
+                                                </div>
+                                            
                                             </div>
 
                                             <div role="tabpanel" class="tab-pane" id="section-2">
-
                                                 <fieldset class="fieldset mb-3">
                                                     <div class="form-group form-row avatar">
                                                         <figure class="figure col-lg-2 col-md-3 col-4">
@@ -179,7 +189,6 @@
                                             </div>
 
                                             <div role="tabpanel" class="tab-pane" id="section-3">
-
                                                 <fieldset class="fieldset mb-3">
                                                     <div class="form-group form-row avatar">
                                                         <figure class="figure col-lg-2 col-md-3 col-4">
@@ -215,19 +224,19 @@
                                                
                                             </div>
 
-                                            {{-- </form> --}}
+                                            
                                             {{-- @endforeach --}}
                                         </div>
+                                            </form>
                                     </div>
-                                    <div class="form-group form-row">
+                                    {{-- <div class="form-group form-row">
                                             <div class="btn-group">
                                                 <input class="btn btn-primary" type="submit" name="submit"
                                                     value="Update">
                                                 <a href="" class="btn btn-warning">Back</a>
                                             </div>
-                                        </div>
+                                        </div> --}}
 
-                                </form>
                             </div>
 
                         </div>
