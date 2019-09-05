@@ -13,6 +13,9 @@
                                     <li class="nav-item nav-item-anim-icon d-none d-md-block"> <a class="nav-link"
                                             href="contact-us.html"><i class="fas fa-angle-right"></i> Contact Us</a>
                                     </li>
+                                    <li class="nav-item nav-item-anim-icon d-none d-md-block"> <a class="nav-link"
+                                        href="contact-us.html"><i class="fas fa-angle-right"></i> Testimonial</a>
+                                </li>
                                 </ul>
                             </nav>
                         </div>
@@ -24,11 +27,14 @@
                                     <li class="nav-item">
                                         <a href="mailto:mail@domain.com"><i
                                                 class="far fa-envelope text-4 text-color-primary" style="top: 1px;"></i>
-                                            mail@domain.com</a>
+                                                @foreach ($gens as $gen)
+                                                {{ $gen->email }}
+                                                @endforeach
+                                           </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="tel:123-456-7890"><i class="fab fa-whatsapp text-4 text-color-primary"
-                                                style="top: 0;"></i> 123-456-7890</a>
+                                                style="top: 0;"></i> {{ $gen->whatsapp }}</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -62,11 +68,11 @@
                                 </nav>
                             </div>
                             <ul class="header-social-icons social-icons d-none d-sm-block">
-                                <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank"
+                                <li class="social-icons-facebook"><a href="{{ $gen->facebook }}" target="_blank"
                                         title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                                <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank"
+                                <li class="social-icons-twitter"><a href="{{ $gen->twitter }}" target="_blank"
                                         title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                                <li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank"
+                                <li class="social-icons-linkedin"><a href="{{ $gen->instagram }}" target="_blank"
                                         title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
                             </ul>
                             <button class="btn header-btn-collapse-nav" data-toggle="collapse"

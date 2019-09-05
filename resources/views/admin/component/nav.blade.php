@@ -85,7 +85,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/admin/testimonial">
+                            <a href="/admin/testi">
                                 <span class="nav-label">Testimonial</span>
                             </a>
                         </li>

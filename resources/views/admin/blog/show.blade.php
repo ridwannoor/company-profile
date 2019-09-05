@@ -24,34 +24,9 @@
                                     </div>
                                     <div class="health-points">
                                         <a href="/admin/blog" class="btn btn-primary">Go Back</a>
-                                        {{-- <div class="number text-success">Back</div>
-                                        <div class="note">Back</div> --}}
                                     </div>
                                 </div>
                                  
-                                {{-- @endforeach --}}
-                                {{-- <div class="basic-info">
-                                    <div class="item item-0 d-none d-sm-inline-block">
-                                        <span class="figure">28</span>
-                                        <br><span class="note">Age</span>
-                                    </div>
-                                    <div class="item item-1">
-                                        <span class="figure">52<span class="unit">kg</span></span>
-                                        <br><span class="note">Weight</span>
-                                    </div>
-                                    <div class="item item-2 d-none d-sm-inline-block">
-                                        <span class="figure">1.65<span class="unit">m</span></span>
-                                        <br><span class="note">Height</span>
-                                    </div>
-                                    <div class="item item-3">
-                                        <span class="figure">22.6</span>
-                                        <br><span class="note">BMI</span>
-                                    </div>
-                                    <div class="item item-4">
-                                        <span class="figure">12<span class="unit">%</span></span>
-                                        <br><span class="note">Fat</span>
-                                    </div>
-                                </div> --}}
                             </div>
                         </div>
                     </div>

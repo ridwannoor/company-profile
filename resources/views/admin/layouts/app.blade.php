@@ -17,9 +17,8 @@
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/elegant-icons.css') }}">
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/pe-7-icons.css') }}">
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/pe-7-icons-helper.css') }}">
+	<link rel="stylesheet" href="{{ asset('admin/assets/css/jquery-steps.css') }}">
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/jquery-jvectormap.css') }}">
-	<link rel="stylesheet" href="{{ asset('admin/assets/css/shepherd-default.css') }}">
-	<link rel="stylesheet" href="{{ asset('admin/assets/css/jstree-default.css') }}">
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/styles.css') }}">
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/dashboard-projects.css') }}">
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/switchery.css') }}">
@@ -128,6 +127,8 @@
 	<script src="{{ asset('admin/assets/js/forms-bootstrap-colorpicker.js') }}"></script>
 	<script src="{{ asset('admin/assets/js/dashboard-health.js') }}"></script>
 	<script src="{{ asset('admin/assets/js/discussion.js') }}"></script>
+
+	<script src="{{ asset('admin/assets/js/forms-wizard.js') }}"></script>
 	{{-- <script>
 		$(document).ready( function () {
 		$('#myTable').DataTable();

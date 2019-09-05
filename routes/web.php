@@ -86,3 +86,13 @@ Route::post('/admin/comment/store', 'Admin\CommentController@store');
 Route::get('/admin/comment/edit/{id}', 'Admin\CommentController@edit');
 Route::put('/admin/comment/update', 'Admin\CommentController@update');
 Route::get('/admin/comment/destroy/{id}', 'Admin\CommentController@destroy');
+
+//Testimonial
+Route::get('/admin/testi', 'Admin\TestiController@index');
+Route::get('/admin/testi/add', 'Admin\TestiController@create');
+Route::post('/admin/testi/store', 'Admin\TestiController@store');
+Route::get('/admin/testi/edit/{id}', 'Admin\TestiController@edit');
+Route::put('/admin/testi/update', 'Admin\TestiController@update');
+Route::get('/admin/testi/destroy/{id}', 'Admin\TestiController@destroy');
+Route::get('/admin/testi/publish/{id}', 'Admin\TestiController@publish');
+Route::get('/admin/testi/show/{id}', 'Admin\TestiController@show');
