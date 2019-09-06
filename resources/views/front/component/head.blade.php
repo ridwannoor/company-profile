@@ -10,7 +10,7 @@
         @endforeach
 
     <meta name="keywords" content="HTML5 Template" />
-    <meta name="description" content="Porto - Responsive HTML5 Template">
+    <meta name="description" content="{{ $gen->name }}">
     <meta name="author" content="okler.net">
 
     <!-- Favicon -->
