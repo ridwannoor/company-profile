@@ -21,6 +21,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/blog', 'BlogController@index')->name('blog');
 Route::get('/blog/detail/{id}', 'BlogController@detail')->name('blogdetail');
 Route::get('/shop', 'ShopController@index')->name('shop');
+Route::get('/testimoni', 'HomeController@testimoni')->name('testimoni');
 Route::get('/admin/dashboard', 'Admin\DashboardController@index');
 // Route::resource('admin/general', 'Admin\GeneralController');
 

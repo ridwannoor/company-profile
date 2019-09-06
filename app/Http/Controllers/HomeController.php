@@ -36,7 +36,11 @@ class HomeController extends Controller
     // {
 
     // }
-    
+    public function testimoni(){
+        $gens = General::all();
+        $testimoni = Testi::all();
+        return view('/testimoni', compact('gens', 'testimoni'));
+    }
     public function index()
     {
         // $features = Feature::find($id);

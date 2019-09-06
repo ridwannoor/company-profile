@@ -4,22 +4,22 @@
         <div class="header-top header-top-default border-bottom-0">
             <div class="container">
                 <div class="header-row py-2">
-                    {{-- <div class="header-column justify-content-start">
+                    <div class="header-column justify-content-start">
                         <div class="header-row">
                             <nav class="header-nav-top">
                                 <ul class="nav nav-pills text-uppercase text-2">
-                                    <li class="nav-item nav-item-anim-icon d-none d-md-block"> <a class="nav-link pl-0"
-                                            href="#"><i class="fas fa-angle-right"></i> About Us</a> </li>
+                                    {{-- <li class="nav-item nav-item-anim-icon d-none d-md-block"> <a class="nav-link pl-0"
+                                            href="#"><i class="fas fa-angle-right"></i> About Us</a> </li> --}}
                                     <li class="nav-item nav-item-anim-icon d-none d-md-block"> <a class="nav-link"
                                             href="#"><i class="fas fa-angle-right"></i> Contact Us</a>
                                     </li>
                                     <li class="nav-item nav-item-anim-icon d-none d-md-block"> <a class="nav-link"
-                                        href="#"><i class="fas fa-angle-right"></i> Testimonial</a>
+                                        href="/testimoni"><i class="fas fa-angle-right"></i> Testimonial</a>
                                 </li>
                                 </ul>
                             </nav>
                         </div>
-                    </div> --}}
+                    </div>
                     <div class="header-column justify-content-end">
                         <div class="header-row">
                             <nav class="header-nav-top">
