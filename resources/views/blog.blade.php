@@ -14,7 +14,7 @@
                             <article class="post post-medium border-0 pb-0 mb-5">
                                 <div class="post-image">
                                     <a href="#">
-                                        <img src="/front/img/blog/medium/blog-1.jpg" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="" />
+                                        <img src="{{ asset('/storage/admin/blog/'.$blog->image)}}" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="" />
                                     </a>
                                 </div>
     
@@ -41,11 +41,7 @@
                 <div class="row">
                     <div class="col">
                         <ul class="pagination float-right">
-                            <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
-                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <a class="page-link" href="#"><i class="fas fa-angle-right"></i></a>
+                            <li class="page-item">{{ $blogs->links() }}</li>
                         </ul>
                     </div>
                 </div>

@@ -15,7 +15,7 @@ class BlogController extends Controller
     public function index()
     {
         $gens = General::all();
-        $blogs = Blog::withCount('comment')->get();
+        $blogs = Blog::withCount('comment')->paginate(8);
         return view('/blog', compact('gens','blogs'));
     }
 

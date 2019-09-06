@@ -4,7 +4,7 @@
         <div class="header-top header-top-default border-bottom-0">
             <div class="container">
                 <div class="header-row py-2">
-                    <div class="header-column justify-content-start">
+                    {{-- <div class="header-column justify-content-start">
                         <div class="header-row">
                             <nav class="header-nav-top">
                                 <ul class="nav nav-pills text-uppercase text-2">
@@ -19,7 +19,7 @@
                                 </ul>
                             </nav>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="header-column justify-content-end">
                         <div class="header-row">
                             <nav class="header-nav-top">

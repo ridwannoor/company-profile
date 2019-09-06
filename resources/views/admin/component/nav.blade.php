@@ -36,6 +36,30 @@
             </li>
             <li  class="nav-dashboards">
                     <a href="#">
+                        <span aria-hidden="true" class="icon icon_drive "></span>
+                        <span class="nav-label">Shop</span>
+                        <span class="fa arrow_carrot-down_alt2 "></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="/admin/shop">
+                                <span class="nav-label">Barang</span>
+                            </a>
+                        </li>
+                        {{-- <li>
+                            <a href="/admin/categorie">
+                                <span class="nav-label">Category</span>
+                            </a>
+                        </li>     
+                        <li>
+                                <a href="/admin/tag">
+                                    <span class="nav-label">Tag</span>
+                                </a>
+                            </li>                 --}}
+                    </ul>
+                </li>
+            <li  class="nav-dashboards">
+                    <a href="#">
                         <span aria-hidden="true" class="icon icon_documents_alt"></span>
                         <span class="nav-label">Customize</span>
                         <span class="fa arrow_carrot-down_alt2 "></span>

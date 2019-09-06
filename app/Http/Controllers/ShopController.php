@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\General;
+use App\Models\Shop;
 
 class ShopController extends Controller
 {
@@ -15,7 +16,8 @@ class ShopController extends Controller
     public function index()
     {
         $gens = General::all();
-        return view('/shop', compact('gens'));
+        $shops = Shop::paginate(8);
+        return view('/shop', compact('gens','shops'));
     }
 
     /**

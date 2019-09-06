@@ -82,7 +82,8 @@
 
     </script>
     <script src="{{ asset('front/master/analytics/analytics.js') }}"></script>
-
+    <!-- Current Page Vendor and Views -->
+    <script src="{{ asset('front/js/views/view.shop.js') }}"></script>
 </body>
 
 <!-- Mirrored from portotheme.com/html/porto/7.5.0/index-classic-color.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Aug 2019 04:04:33 GMT -->

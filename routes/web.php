@@ -69,6 +69,14 @@ Route::get('/admin/sponsor/edit/{id}', 'Admin\SponsorController@edit');
 Route::put('/admin/sponsor/update', 'Admin\SponsorController@update');
 Route::get('/admin/sponsor/destroy/{id}', 'Admin\SponsorController@destroy');
 
+//Shop
+Route::get('/admin/shop', 'Admin\ShopController@index');
+Route::get('/admin/shop/add', 'Admin\ShopController@create');
+Route::post('/admin/shop/store', 'Admin\ShopController@store');
+Route::get('/admin/shop/edit/{id}', 'Admin\ShopController@edit');
+Route::put('/admin/shop/update', 'Admin\ShopController@update');
+Route::get('/admin/shop/destroy/{id}', 'Admin\ShopController@destroy');
+
 //Blog
 Route::get('/admin/blog', 'Admin\BlogController@index');
 Route::get('/admin/blog/add', 'Admin\BlogController@create');

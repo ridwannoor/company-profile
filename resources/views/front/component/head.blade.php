@@ -58,4 +58,6 @@
     <!-- Head Libs -->
     <script src="{{ asset('front/vendor/modernizr/modernizr.min.js') }}"></script>
 
+    <link rel="stylesheet" href="{{ asset('front/css/theme-blog.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/css/theme-shop.css') }}">
 </head>
