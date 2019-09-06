@@ -52,7 +52,7 @@
                                                                             <a href="/admin/testi/publish/{{ $t->id }}" class="btn btn-default">{{ $label }}</a>
                                                                             <a href="/admin/testi/show/{{$t->id}}" class="btn btn-primary">Show</a>
                                                                             <a href="/admin/testi/edit/{{$t->id}}" class="btn btn-warning">Edit</a>
-                                                                            <a href="/admin/test/destroy/{{$t->id}}" class="btn btn-danger">Hapus</a>
+                                                                            <a href="/admin/testi/destroy/{{$t->id}}" class="btn btn-danger">Hapus</a>
                                                                         </div>
                                                                     </td>
                                                                 </tr>  

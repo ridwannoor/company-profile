@@ -21,9 +21,9 @@ class SliderController extends Controller
      */
     public function index()
     {
+        $slider = Slider::all();
         $gens = General::all();
-        $sliders = Slider::all();
-        return view('admin.customize.slider', compact('sliders', 'gens'));
+        return view('admin.customize.slider', compact('gens','slider'));
     }
 
     /**
@@ -33,8 +33,7 @@ class SliderController extends Controller
      */
     public function create()
     {
-        $gens = General::all();
-        return view('admin.customize.addslider', compact('gens'));
+        return view('admin.customize.addslider');
     }
 
     /**
@@ -48,7 +47,7 @@ class SliderController extends Controller
         if (!$file = $request->file('image')) {
             Slider::create([
                 'title' => $request->title,
-                'deskripsi' => $request->deskripsi
+                'deskripsi' => $request->deskripsi,
             ]);
             return redirect ('/admin/slider') ; 
         }
@@ -56,13 +55,13 @@ class SliderController extends Controller
             
             $file = $request->file('image');
             $ext = $file->getClientOriginalExtension();
-            $filename1 = $request->id.time().".".$ext;            
-            $request->file('image')->storeAs('public/admin/slider', $filename1);
+            $filename = $request->id.time().".".$ext;            
+            $request->file('image')->storeAs('public/admin/slider', $filename);
 
             Slider::create([
                 'title' => $request->title,
-                'deskripsi' => $request->deskripsi,                
-                'image' => $filename1
+                'deskripsi' => $request->deskripsi,           
+                'image' => $filename
             ]);
             return redirect ('/admin/slider') ;
         }
@@ -87,9 +86,9 @@ class SliderController extends Controller
      */
     public function edit($id)
     {
+        $slider = Slider::find($id);
         $gens = General::all();
-        $slider = Slider::findorfail($id);
-        return view('admin.customize.editslider', compact('slider','gens'));
+        return view('admin.customize.editslider', compact('gens','slider'));
     }
 
     /**
@@ -102,27 +101,30 @@ class SliderController extends Controller
     public function update(Request $request)
     {
         if (!$file = $request->file('image')) {
+           
             Slider::where('id','=', $request->id)
             ->update([
                 'title' => $request->title,
-                'deskripsi' => $request->deskripsi
+                'deskripsi' => $request->deskripsi               
             ]);
-            return redirect ('/admin/slider') ; 
+            return redirect('/admin/slider') ;
         }
+
+
         else {
-            
             $file = $request->file('image');
             $ext = $file->getClientOriginalExtension();
-            $filename1 = $request->id.time().".".$ext;            
-            $request->file('image')->storeAs('public/admin/slider', $filename1);
-
+            $filename = $request->id.time().".".$ext;            
+            $request->file('image')->storeAs('public/admin/slider', $filename);
             Slider::where('id','=', $request->id)
             ->update([
                 'title' => $request->title,
-                'deskripsi' => $request->deskripsi,                
-                'image' => $filename1
+                'deskripsi' => $request->deskripsi,
+                'image' => $filename,
+                
+                
             ]);
-            return redirect ('/admin/slider') ;
+            return redirect('/admin/slider') ;
         }
     }
 

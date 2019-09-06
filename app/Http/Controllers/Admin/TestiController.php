@@ -115,7 +115,7 @@ class TestiController extends Controller
             $filename1 = $request->id.time().".".$ext;            
             $request->file('image')->storeAs('public/admin/testi', $filename1);
 
-            Team::where('id','=', $request->id)
+            Testi   ::where('id','=', $request->id)
             ->update([
                 'name' => $request->name,
                 'deskripsi' => $request->deskripsi,          

@@ -30,27 +30,32 @@
                     <div class="contact-details">
                         <h5 class="text-3 mb-3">CONTACT US</h5>
                         <ul class="list list-icons list-icons-lg">
+                           
                             <li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i>
-                                <p class="m-0">234 Street Name, City Name</p>
+                               @foreach ($gens as $gen)  
+                                <p class="m-0">{{ $gen->alamat }}</p>
+                                @endforeach 
                             </li>
                             <li class="mb-1"><i class="fab fa-whatsapp text-color-primary"></i>
-                                <p class="m-0"><a href="tel:8001234567">(800) 123-4567</a></p>
+                                <p class="m-0"><a href="tel:8001234567">{{ $gen->phone }}</a></p>
                             </li>
                             <li class="mb-1"><i class="far fa-envelope text-color-primary"></i>
-                                <p class="m-0"><a href="mailto:mail@example.com">mail@example.com</a></p>
+                                <p class="m-0"><a href="mailto:mail@example.com">{{ $gen->email }}</a></p>
                             </li>
+                            
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-2">
                     <h5 class="text-3 mb-3">FOLLOW US</h5>
                     <ul class="social-icons">
-                        <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank"
+                        <li class="social-icons-facebook"><a href="{{ url($gen->facebook) }}" target="_blank"
                                 title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                        <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank"
+                        <li class="social-icons-twitter"><a href="{{ $gen->twitter }}" target="_blank"
                                 title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                        <li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank"
-                                title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li class="social-icons-instagram"><a href="{{ $gen->instagram }}" target="_blank"
+                                title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        
                     </ul>
                 </div>
             </div>

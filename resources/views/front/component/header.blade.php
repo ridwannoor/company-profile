@@ -9,12 +9,12 @@
                             <nav class="header-nav-top">
                                 <ul class="nav nav-pills text-uppercase text-2">
                                     <li class="nav-item nav-item-anim-icon d-none d-md-block"> <a class="nav-link pl-0"
-                                            href="about-us.html"><i class="fas fa-angle-right"></i> About Us</a> </li>
+                                            href="#"><i class="fas fa-angle-right"></i> About Us</a> </li>
                                     <li class="nav-item nav-item-anim-icon d-none d-md-block"> <a class="nav-link"
-                                            href="contact-us.html"><i class="fas fa-angle-right"></i> Contact Us</a>
+                                            href="#"><i class="fas fa-angle-right"></i> Contact Us</a>
                                     </li>
                                     <li class="nav-item nav-item-anim-icon d-none d-md-block"> <a class="nav-link"
-                                        href="contact-us.html"><i class="fas fa-angle-right"></i> Testimonial</a>
+                                        href="#"><i class="fas fa-angle-right"></i> Testimonial</a>
                                 </li>
                                 </ul>
                             </nav>
@@ -48,8 +48,8 @@
                 <div class="header-column">
                     <div class="header-row">
                         <div class="header-logo">
-                            <a href="index.html">
-                                <img alt="Porto" width="100" height="48" src="{{ asset('/front/img/logo.png') }}">
+                            <a href="/">
+                                <img alt="Porto" width="100" height="48" src="{{ asset('/storage/admin/general/'.$gen->image)}}">
                             </a>
                         </div>
                     </div>
@@ -61,9 +61,9 @@
                                 class="header-nav-main header-nav-main-square header-nav-main-effect-2 header-nav-main-sub-effect-1">
                                 <nav class="collapse">
                                     <ul class="nav nav-pills" id="mainNav">
-                                        <li> <a href="#"> Home </a></li>
-                                        <li> <a href="#"> Blog </a></li>
-                                        <li> <a href="#"> Shop </a></li>
+                                        <li> <a href="/"> Home </a></li>
+                                        <li> <a href="/blog"> Blog </a></li>
+                                        <li> <a href="/shop"> Shop </a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -72,8 +72,8 @@
                                         title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
                                 <li class="social-icons-twitter"><a href="{{ $gen->twitter }}" target="_blank"
                                         title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                                <li class="social-icons-linkedin"><a href="{{ $gen->instagram }}" target="_blank"
-                                        title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li class="social-icons-instagram"><a href="{{ $gen->instagram }}" target="_blank"
+                                        title="Instagram"><i class="fab fa-instagram"></i></a></li>
                             </ul>
                             <button class="btn header-btn-collapse-nav" data-toggle="collapse"
                                 data-target=".header-nav-main nav">

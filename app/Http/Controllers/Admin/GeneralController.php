@@ -151,16 +151,16 @@ class GeneralController extends Controller
      */
     public function update(Request $request)
     {
-        if (!$file = $request->file('image') ) {
-            $file = $request->file('logo');
-            $ext = $file->getClientOriginalExtension();
-            $filename = $request->id.time().".".$ext;            
-            $request->file('logo')->storeAs('public/admin/general', $filename);
+        if (!$file = $request->file('image') && !$file = $request->file('logo')) {
+            // $file = $request->file('logo');
+            // $ext = $file->getClientOriginalExtension();
+            // $filename = $request->id.time().".".$ext;            
+            // $request->file('logo')->storeAs('public/admin/general', $filename);
 
             General::where('id','=', $request->id)
             ->update([
                 'name' => $request->name,
-                'logo' => $filename,
+                // 'logo' => $filename,
                 'email' => $request->email,
                 'phone' => $request->phone,
                 'alamat' => $request->alamat,
@@ -193,41 +193,19 @@ class GeneralController extends Controller
             ]);
             return redirect('/admin/general') ;
         }
-        elseif ($file = $request->file('logo') && $file = $request->file('image')) {
+
+        elseif (!$file = $request->file('image')) {
             $file = $request->file('logo');
             $ext = $file->getClientOriginalExtension();
             $filename = $request->id.time().".".$ext;            
             $request->file('logo')->storeAs('public/admin/general', $filename);
 
-            $file = $request->file('image');
-            $ext = $file->getClientOriginalExtension();
-            $filename1 = $request->id.time().".".$ext;            
-            $request->file('image')->storeAs('public/admin/general', $filename1);
-
             General::where('id','=', $request->id)
             ->update([
                 'name' => $request->name,
                 'logo' => $filename,
-                'image' => $filename1,
                 'email' => $request->email,
                 'phone' => $request->phone,
-                'alamat' => $request->alamat,               
-                'twitter' => $request->twitter,
-                'linkedin' => $request->linkedin, 
-                'facebook'=> $request->facebook, 
-                'instagram'=> $request->instagram, 
-                'whatsapp'=> $request->whatsapp 
-            ]);
-            return redirect('/admin/general') ;
-        }
-
-        elseif (!$file = $request->file('logo') && !$file = $request->file('image')) {
-            General::where('id','=', $request->id)
-            ->update([
-                'name' => $request->name,
-                'email' => $request->email,
-                'phone' => $request->phone,
-                // 'image' => $filename,
                 'alamat' => $request->alamat,
                 'twitter' => $request->twitter,
                 'linkedin' => $request->linkedin, 

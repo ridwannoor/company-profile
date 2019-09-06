@@ -18,6 +18,9 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/blog', 'BlogController@index')->name('blog');
+Route::get('/blog/detail/{id}', 'BlogController@detail')->name('blogdetail');
+Route::get('/shop', 'ShopController@index')->name('shop');
 Route::get('/admin/dashboard', 'Admin\DashboardController@index');
 // Route::resource('admin/general', 'Admin\GeneralController');
 
@@ -36,8 +39,11 @@ Route::get('/admin/slider/destroy/{id}', 'Admin\SliderController@destroy');
 
 //Feature
 Route::get('/admin/feature', 'Admin\FeatureController@index');
+Route::get('/admin/feature/add', 'Admin\FeatureController@create');
+Route::post('/admin/feature/store', 'Admin\FeatureController@store');
 Route::get('/admin/feature/edit/{id}', 'Admin\FeatureController@edit');
 Route::put('/admin/feature/update', 'Admin\FeatureController@update');
+Route::get('/admin/feature/destroy/{id}', 'Admin\FeatureController@destroy');
 
 //Team
 Route::get('/admin/team', 'Admin\TeamController@index');
@@ -49,8 +55,19 @@ Route::get('/admin/team/destroy/{id}', 'Admin\TeamController@destroy');
 
 //Services
 Route::get('/admin/service', 'Admin\ServiceController@index');
+Route::get('/admin/service/add', 'Admin\ServiceController@create');
+Route::post('/admin/service/store', 'Admin\ServiceController@store');
 Route::get('/admin/service/edit/{id}', 'Admin\ServiceController@edit');
 Route::put('/admin/service/update', 'Admin\ServiceController@update');
+Route::get('/admin/service/destroy/{id}', 'Admin\ServiceController@destroy');
+
+//Sponsor
+Route::get('/admin/sponsor', 'Admin\SponsorController@index');
+Route::get('/admin/sponsor/add', 'Admin\SponsorController@create');
+Route::post('/admin/sponsor/store', 'Admin\SponsorController@store');
+Route::get('/admin/sponsor/edit/{id}', 'Admin\SponsorController@edit');
+Route::put('/admin/sponsor/update', 'Admin\SponsorController@update');
+Route::get('/admin/sponsor/destroy/{id}', 'Admin\SponsorController@destroy');
 
 //Blog
 Route::get('/admin/blog', 'Admin\BlogController@index');

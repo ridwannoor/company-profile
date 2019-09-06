@@ -9,21 +9,20 @@
                                                     <section class="module">
                                                         <div class="module-inner">
                                                             <div class="module-heading">
-                                                                <h3 class="module-title">Services</h3>
+                                                                <h3 class="module-title">Sponsor</h3>
                                                             </div>
                                                             <div class="module-content collapse show" id="content-4">
                                                                 <div class="module-content-inner pb-0">
                                                                     <form class="mb-3">
                                                                             <fieldset class="fieldset mb-3">
                                                                                     {{-- <h3 class="fieldset-title">Team</h3> --}}
-                                                                                   <p><a href="/admin/service/add" class="btn btn-primary">Tambah</a></p> 
+                                                                                   <p><a href="/admin/sponsor/add" class="btn btn-primary">Tambah</a></p> 
                                                                                     <div class="table-responsive">
                                                                                             <table class="table">
                                                                                                 <thead>
                                                                                                     <tr>
                                                                                                         <th scope="col">#</th>
                                                                                                         <th scope="col">Title</th>
-                                                                                                        <th scope="col">Deskripsi</th>
                                                                                                         <th scope="col">Image</th>
                                                                                                         <th scope="col">Action</th>
                                                                                                     </tr>
@@ -32,16 +31,15 @@
                                                                                                     $no = 1 ;
                                                                                                 @endphp
                                                                                                 <tbody>
-                                                                                                    @foreach ($services as $t)    
+                                                                                                    @foreach ($sponsors as $t)    
                                                                                                     <tr>
                                                                                                         <th scope="row">{{ $no++ }}</th>
                                                                                                         <td>{{ $t->title }}</td>
-                                                                                                        <td>{{ $t->deskripsi }}</td>
-                                                                                                        <td> <img class="rounded img-fluid" src="{{ asset('/storage/admin/service/'.$t->image)}}" width="150px" alt="" /></td>
+                                                                                                        <td> <img class="rounded img-fluid" src="{{ asset('/storage/admin/sponsor/'.$t->image)}}" width="150px" alt="" /></td>
                                                                                                         <td>
                                                                                                             <div class="btn-group">
-                                                                                                                <a href="/admin/service/edit/{{$t->id}}" class="btn btn-warning">Edit</a>
-                                                                                                                <a href="/admin/service/destroy/{{$t->id}}" class="btn btn-danger">Hapus</a>
+                                                                                                                <a href="/admin/sponsor/edit/{{$t->id}}" class="btn btn-warning">Edit</a>
+                                                                                                                <a href="/admin/sponsor/destroy/{{$t->id}}" class="btn btn-danger">Hapus</a>
                                                                                                             </div>
                                                                                                         </td>
                                                                                                     </tr>  

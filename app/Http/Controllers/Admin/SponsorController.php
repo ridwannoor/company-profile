@@ -4,10 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Sponsor;
 use App\Models\General;
-use App\Models\Service;
 
-class ServiceController extends Controller
+
+class SponsorController extends Controller
 {
     public function __construct()
     {
@@ -21,9 +22,9 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $services = Service::all();
+        $sponsors = Sponsor::all();
         $gens = General::all();
-        return view('admin.customize.service', compact('gens','services'));
+        return view('admin.customize.sponsor', compact('gens','sponsors'));
     }
 
     /**
@@ -33,7 +34,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        return view('admin.customize.addservice');
+        return view('admin.customize.addsponsor');
     }
 
     /**
@@ -45,25 +46,25 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         if (!$file = $request->file('image')) {
-            Service::create([
+            Sponsor::create([
                 'title' => $request->title,
                 'deskripsi' => $request->deskripsi,
             ]);
-            return redirect ('/admin/service') ; 
+            return redirect ('/admin/sponsor') ; 
         }
         else {
             
             $file = $request->file('image');
             $ext = $file->getClientOriginalExtension();
             $filename = $request->id.time().".".$ext;            
-            $request->file('image')->storeAs('public/admin/service', $filename);
+            $request->file('image')->storeAs('public/admin/sponsor', $filename);
 
-            Service::create([
+            Sponsor::create([
                 'title' => $request->title,
                 'deskripsi' => $request->deskripsi,           
                 'image' => $filename
             ]);
-            return redirect ('/admin/service') ;
+            return redirect ('/admin/sponsor') ;
         }
     }
 
@@ -86,9 +87,9 @@ class ServiceController extends Controller
      */
     public function edit($id)
     {
-        $service = Service::find($id);
+        $sponsors = Sponsor::find($id);
         $gens = General::all();
-        return view('admin.customize.editservice', compact('gens','service'));
+        return view('admin.customize.editsponsor', compact('gens','sponsors'));
     }
 
     /**
@@ -102,12 +103,12 @@ class ServiceController extends Controller
     {
         if (!$file = $request->file('image')) {
            
-            Service::where('id','=', $request->id)
+            Sponsor::where('id','=', $request->id)
             ->update([
                 'title' => $request->title,
                 'deskripsi' => $request->deskripsi               
             ]);
-            return redirect('/admin/service') ;
+            return redirect('/admin/sponsor') ;
         }
 
 
@@ -115,19 +116,15 @@ class ServiceController extends Controller
             $file = $request->file('image');
             $ext = $file->getClientOriginalExtension();
             $filename = $request->id.time().".".$ext;            
-            $request->file('image')->storeAs('public/admin/service', $filename);
-
-            
-
-            Service::where('id','=', $request->id)
+            $request->file('image')->storeAs('public/admin/sponsor', $filename);
+            Sponsor::where('id','=', $request->id)
             ->update([
                 'title' => $request->title,
-                'deskripsi' => $request->deskripsi,
                 'image' => $filename,
                 
                 
             ]);
-            return redirect('/admin/service') ;
+            return redirect('/admin/sponsor') ;
         }
     }
 
@@ -139,8 +136,8 @@ class ServiceController extends Controller
      */
     public function destroy($id)
     {
-        $data = Service::find($id);
+        $data = Sponsor::find($id);
         $data->delete($data);
-        return redirect('/admin/service');
+        return redirect('/admin/sponsor');
     }
 }

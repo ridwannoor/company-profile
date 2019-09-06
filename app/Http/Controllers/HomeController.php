@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\General;
 use App\Models\Slider;
+use App\Models\Service;
 use App\Models\Blog;
 use App\Models\Categorie;
 use App\Models\Feature;
 use App\Models\Testi;
+use App\Models\Sponsor;
 use App\Services\Trending;
 use Spatie\Analytics\Period;
 use Analytics;  
@@ -45,6 +47,9 @@ class HomeController extends Controller
         $sliders = Slider::all();
         $gens = General::all();
         $testimonial = Testi::all();
-        return view('home', compact('gens','sliders', 'posts','category','posts2','posts3', 'testimonial'));
+        $features = Feature::all();
+        $services = Service::all();
+        $sponsors = Sponsor::all();
+        return view('home', compact('sponsors','gens','sliders', 'posts','category','posts2','posts3', 'testimonial','features', 'services'));
     }
 }

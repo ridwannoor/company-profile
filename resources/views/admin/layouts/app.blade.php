@@ -32,6 +32,9 @@
 	<link rel="stylesheet" href="//cdn.datatables.net/v/bs4/dt-1.10.18/r-2.2.2/datatables.min.css"/>
 	<link rel="stylesheet" href="//unpkg.com/gijgo%401.9.11/css/gijgo.min.css">
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/discussion.css') }}">
+
+	<link rel="stylesheet" href="{{ asset('admin/assets/css/flexslider.css') }}">
+	<link rel="stylesheet" href="{{ asset('admin/assets/css/owl-carousel.css') }}">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-24707561-55"></script>
 	<script>
@@ -127,7 +130,8 @@
 	<script src="{{ asset('admin/assets/js/forms-bootstrap-colorpicker.js') }}"></script>
 	<script src="{{ asset('admin/assets/js/dashboard-health.js') }}"></script>
 	<script src="{{ asset('admin/assets/js/discussion.js') }}"></script>
-
+	<script src="{{ asset('admin/assets/js/owl-carousel.js') }}"></script>
+	
 	<script src="{{ asset('admin/assets/js/forms-wizard.js') }}"></script>
 	{{-- <script>
 		$(document).ready( function () {

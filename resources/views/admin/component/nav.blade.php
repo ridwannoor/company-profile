@@ -70,33 +70,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/admin/team">
-                                <span class="nav-label">Team</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/admin/pricing">
-                                <span class="nav-label">Pricing</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/admin/works">
-                                <span class="nav-label">Works</span>
+                            <a href="/admin/sponsor">
+                                <span class="nav-label">Sponsor</span>
                             </a>
                         </li>
                         <li>
                             <a href="/admin/testi">
                                 <span class="nav-label">Testimonial</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/admin/blog">
-                                <span class="nav-label">Blog</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/admin/contact">
-                                <span class="nav-label">Contact</span>
                             </a>
                         </li>
                     </ul>
