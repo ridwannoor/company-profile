@@ -31,7 +31,7 @@
                                             <label class="control-label col-12">Image</label>
                                             <img class="rounded img-fluid"
                                                 {{-- src="{{ asset('/storage/admin/general/'.$gen->image)}}" alt="" /> --}}
-                                                 src="{{ url('/img/'.$gen->file) }}" alt="" />
+                                                 src="{{ asset('/storage/admin/general/'.$gen->image)}}" alt="" />
                                         </figure>
                                         <div class="form-inline col-lg-10 col-md-9 col-12">
                                             {{-- <input type="file" name="image" class="file-uploader float-left"> --}}

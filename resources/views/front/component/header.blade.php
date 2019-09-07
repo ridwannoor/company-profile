@@ -1,5 +1,6 @@
 <header id="header" class="header-effect-shrink"
     data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 120, 'stickyHeaderContainerHeight': 70}">
+    @foreach ($gens as $gen)
     <div class="header-body border-color-primary header-body-bottom-border">
         <div class="header-top header-top-default border-bottom-0">
             <div class="container">
@@ -27,9 +28,9 @@
                                     <li class="nav-item">
                                         <a href="mailto:mail@domain.com"><i
                                                 class="far fa-envelope text-4 text-color-primary" style="top: 1px;"></i>
-                                                @foreach ($gens as $gen)
+                                                
                                                 {{ $gen->email }}
-                                                @endforeach
+                                                
                                            </a>
                                     </li>
                                     <li class="nav-item">
@@ -126,4 +127,5 @@
             </div>
         </div>
     </div>
+    @endforeach
 </header>

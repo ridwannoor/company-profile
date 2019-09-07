@@ -30,11 +30,11 @@
                     <div class="contact-details">
                         <h5 class="text-3 mb-3">CONTACT US</h5>
                         <ul class="list list-icons list-icons-lg">
-                           
+                           @foreach ($gens as $gen)  
                             <li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i>
-                               @foreach ($gens as $gen)  
+                               
                                 <p class="m-0">{{ $gen->alamat }}</p>
-                                @endforeach 
+                                
                             </li>
                             <li class="mb-1"><i class="fab fa-whatsapp text-color-primary"></i>
                                 <p class="m-0"><a href="tel:8001234567">{{ $gen->phone }}</a></p>
@@ -42,20 +42,21 @@
                             <li class="mb-1"><i class="far fa-envelope text-color-primary"></i>
                                 <p class="m-0"><a href="mailto:mail@example.com">{{ $gen->email }}</a></p>
                             </li>
-                            
+                            @endforeach  
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-2">
                     <h5 class="text-3 mb-3">FOLLOW US</h5>
                     <ul class="social-icons">
+                            @foreach ($gens as $gen) 
                         <li class="social-icons-facebook"><a href="{{ url($gen->facebook) }}" target="_blank"
                                 title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
                         <li class="social-icons-twitter"><a href="{{ $gen->twitter }}" target="_blank"
                                 title="Twitter"><i class="fab fa-twitter"></i></a></li>
                         <li class="social-icons-instagram"><a href="{{ $gen->instagram }}" target="_blank"
                                 title="Instagram"><i class="fab fa-instagram"></i></a></li>
-                        
+                                @endforeach  
                     </ul>
                 </div>
             </div>
