@@ -60,8 +60,9 @@
             </div>
             <div class="col-lg-4">
                 <div class="get-started text-left text-lg-right">
-                        <span class="highlighted-word text-color-primary font-weight-semibold text-5"><a href="https://wa.me/6287788518142" target="_blank" class="btn btn-success btn-lg text-3 font-weight-semibold px-4 py-3">Whatsapp</a></span> 
-                     {{-- <div class="learn-more">or <a href="index.html">learn more.</a></div>  --}}
+                    @foreach ($gens as $gen)
+                        <span class="highlighted-word text-color-primary font-weight-semibold text-5"><a href="{{ url($gen->whatsapp)  }}" target="_blank" class="btn btn-success btn-lg text-3 font-weight-semibold px-4 py-3">Whatsapp</a></span> 
+                     @endforeach
                 </div>
             </div> 
         </div>

@@ -20,28 +20,21 @@
                         </div>
                         <div class="module-content collapse show" id="content-1">
                             <div class="module-content-inner pb-0">
-                                <form action="/admin/blog/store" method="POST" enctype="multipart/form-data">
+                                <form class="mb-5" action="/admin/blog/store" method="POST" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                                         <input type="hidden" name="_method" value="POST" />
                                     </div>
-                                   
-                                   
                                     <div class="form-group">
                                         <label for="title">Title</label>
                                         <input type="text" name="title" class="form-control" id="title"
                                             placeholder="Title">
-                                        {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email
-                                            with anyone else.</small> --}}
                                     </div>
                                     <div class="form-group">
                                         <label for="content">Content</label>
-                                        <textarea name="content" id="content" class="form-control"></textarea>
+                                        <textarea id="summernote-editor" rows="10" name="content" class="form-control"></textarea>
                                     </div>
-                                    {{-- <div class="form-group">
-                                        <label for="author_id">Author</label>
-                                        <input name="author_id" type="text" id="author_id" class="form-control">
-                                    </div> --}}
+                                     
                                     <div class="form-group">
                                         <label for="Categorie">Category</label>
                                         <select class="form-control" id="categorie_id" name="categorie_id" required>

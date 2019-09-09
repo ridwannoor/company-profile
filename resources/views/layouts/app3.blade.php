@@ -20,7 +20,7 @@
 
         <div role="main" class="main">
 
-            @yield('main');
+            @yield('main')
             
 
         </div>

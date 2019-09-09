@@ -12,7 +12,7 @@
 	<link rel="shortcut icon" href="assets/images/favicon.ico">  
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel='stylesheet' type='text/css'>
 	
-	<link rel="stylesheet" href="../../../../use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/metisMenu.css') }}">
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/elegant-icons.css') }}">
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/pe-7-icons.css') }}">
@@ -29,14 +29,16 @@
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/jstree-default.css') }}">
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/account.css') }}">
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/dashboard-health.css') }}">	
-	<link rel="stylesheet" href="//cdn.datatables.net/v/bs4/dt-1.10.18/r-2.2.2/datatables.min.css"/>
-	<link rel="stylesheet" href="//unpkg.com/gijgo%401.9.11/css/gijgo.min.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/v/bs4/dt-1.10.18/r-2.2.2/datatables.min.css"/>
+	<link rel="stylesheet" href="https://unpkg.com/gijgo%401.9.11/css/gijgo.min.css">
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/discussion.css') }}">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.css">
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/flexslider.css') }}">
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/owl-carousel.css') }}">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-24707561-55"></script>
+	<link rel="stylesheet" href="{{ asset('admin/assets/css/fullcalendar.css') }}">
+	<link rel="stylesheet" href="{{ asset('admin/assets/css/fullcalendar-print.css') }}" media="print">
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
@@ -107,7 +109,7 @@
 	<script src="{{ asset('admin/assets/js/jquery-knob.js') }}"></script>
 	<script src="{{ asset('admin/assets/js/switchery.js') }}"></script>
 	<script src="{{ asset('admin/assets/js/bootstrap-switch.js') }}"></script>
-	<script src="//unpkg.com/gijgo%401.9.11/js/gijgo.min.js" type="text/javascript"></script>
+	<script src="https://unpkg.com/gijgo%401.9.11/js/gijgo.min.js" type="text/javascript"></script>
 	<script src="{{ asset('admin/assets/js/shepherd.js') }}"></script>
 	<!--// Flot Charts  -->
 	<script src="{{ asset('admin/assets/js/jquery-charts-flot.js') }}"></script>
@@ -115,7 +117,7 @@
 	<script src="{{ asset('admin/assets/js/jquery-flot-tooltip.js') }}"></script>	
 	<script src="{{ asset('admin/assets/js/main.js') }}"></script>
 	<script src="{{ asset('admin/assets/js/tour.js') }}"></script>
-	<script type="text/javascript" src="//cdn.datatables.net/v/bs4/dt-1.10.18/r-2.2.2/datatables.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/r-2.2.2/datatables.min.js"></script>
 	<script src="{{ asset('admin/assets/js/dashboard-projects.js') }}"></script>
 	<script src="{{ asset('admin/assets/js/tables.js') }}"></script>
 	<script src="{{ asset('admin/assets/js/forms-chosen.js') }}"></script>
@@ -131,8 +133,11 @@
 	<script src="{{ asset('admin/assets/js/dashboard-health.js') }}"></script>
 	<script src="{{ asset('admin/assets/js/discussion.js') }}"></script>
 	<script src="{{ asset('admin/assets/js/owl-carousel.js') }}"></script>
-	
+	<script src="{{ asset('admin/assets/js/forms-summernote.js') }}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.min.js"></script>
 	<script src="{{ asset('admin/assets/js/forms-wizard.js') }}"></script>
+	<script src="{{ asset('admin/assets/js/fullcalendar.js') }}"></script>
+	<script src="{{ asset('admin/assets/js/calendar-1.js') }}"></script>
 	{{-- <script>
 		$(document).ready( function () {
 		$('#myTable').DataTable();

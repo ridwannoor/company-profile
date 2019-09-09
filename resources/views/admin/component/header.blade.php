@@ -188,9 +188,16 @@
                     <img src="{{ asset('admin/assets/images/profiles/profile-3.png') }}" alt="" />
                 </div>
                 <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu-user" >
-                    <li><span class="arrow"></span><a role="menuitem" href="user-profile.html"><span class="pe-icon pe-7s-user icon"></span>My Account</a></li>
-                    <li><a role="menuitem" href="pricing.html"><span class="pe-icon pe-7s-paper-plane icon"></span>Upgrade Plan</a></li>
-                    <li><a role="menuitem" href="login.html"><span class="pe-icon pe-7s-power icon"></span>Sign Out</a></li>
+                    <li><span class="arrow"></span><a role="menuitem" href="/profile"><span class="pe-icon pe-7s-user icon"></span>My Account</a></li>
+                    {{-- <li><a role="menuitem" href="pricing.html"><span class="pe-icon pe-7s-paper-plane icon"></span>Upgrade Plan</a></li> --}}
+                    <li>
+                        <a role="menuitem" href="{{ route('logout') }}" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        <span class="pe-icon pe-7s-power icon"></span>Sign Out</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </li>
                 </ul>
             </div>
         </div>

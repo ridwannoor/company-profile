@@ -22,6 +22,7 @@ class SliderController extends Controller
     public function index()
     {
         $slider = Slider::all();
+        // dd($slider);
         $gens = General::all();
         return view('admin.customize.slider', compact('gens','slider'));
     }
@@ -56,8 +57,8 @@ class SliderController extends Controller
             $file = $request->file('image');
             $ext = $file->getClientOriginalExtension();
             $filename = $request->id.time().".".$ext;            
-            $request->file('image')->storeAs('public/admin/slider', $filename);
-
+           $request->file('image')->storeAs('public/admin/slider', $filename);
+            // dd($fi);
             Slider::create([
                 'title' => $request->title,
                 'deskripsi' => $request->deskripsi,           

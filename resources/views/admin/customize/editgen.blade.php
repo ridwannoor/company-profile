@@ -115,7 +115,7 @@
                                                 <label class="col-lg-2  col-md-3 col-12 control-label">Whatsapp</label>
                                                 <div class="col-lg-10 col-md-9 col-12">
                                                     <input type="text" class="form-control" name="whatsapp" value="{{ $gen->whatsapp }}">
-                                                    <p class="help-block">Your whatsapp phone number</p>
+                                                    <p class="help-block">https://wa.me/62xxxxxxxxxx</p>
                                                 </div>
                                             </div>
                                             

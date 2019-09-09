@@ -20,10 +20,11 @@
                                                 src="{{ asset('/storage/admin/general/'.$gen->logo)}}" alt="" />
                                             @endforeach
                                             {{-- <img class="rounded img-fluid" src="#" alt="" /> --}}
-
+                                            
+                                            {{-- <label for="image">Gambar berukuran : 1366 x 248</label> --}}
                                         </figure>
                                         <div class="form-inline col-lg-10 col-md-9 col-12">
-
+                                            <p class="help-block">Image Size : 1366 x 248</p>
                                         </div>
                                     </div>
                                     <div class="form-group form-row avatar">
@@ -34,9 +35,8 @@
                                                  src="{{ asset('/storage/admin/general/'.$gen->image)}}" alt="" />
                                         </figure>
                                         <div class="form-inline col-lg-10 col-md-9 col-12">
-                                            {{-- <input type="file" name="image" class="file-uploader float-left"> --}}
-                                            {{-- <button type="submit" class="btn btn-sm btn-default-alt float-left">Update Image</button> --}}
-                                        </div>
+                                                <p class="help-block">Image Size : 1366 x 248</p>
+                                            </div>
                                     </div>
                                     <div class="form-group form-row">
                                         <label class="col-lg-2 col-md-3 col-12 control-label">Name Site</label>
@@ -117,7 +117,7 @@
                                             <div class="col-lg-10 col-md-9 col-12">
                                                 <label type="text" class="form-control"
                                                     name="whatsapp">{{ $gen->whatsapp }}</label>
-                                                <p class="help-block">Your whatsapp phone number</p>
+                                                <p class="help-block">https://wa.me/62xxxxxxxxxx</p>
                                             </div>
                                         </div>
 

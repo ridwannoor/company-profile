@@ -46,7 +46,7 @@
                                             <tr>
                                                 <td>{{ $no++ }}</td>
                                                 <td>{{ $b->title }}</td>
-                                                <td>{{ $b->content }}</td>
+                                                <td>{{ str_limit(strip_tags($b->content)), 50 ? "...ReadMore" : "" }}</td>
                                                 <td>{{ $b->user->name }}</td>
                                                 <td>{{ $b->categorie->title }}</td>
                                                 <td><span class="btn btn-xs btn-default">{{ $b->tags->implode('name', ', ') }}</span></td>

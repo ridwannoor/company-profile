@@ -47,7 +47,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="content">Content</label>
-                                        <textarea name="content" id="content" class="form-control">{{ $blogs->content }}</textarea>
+                                        <textarea name="content" id="summernote-editor" rows="10" class="form-control">{{ $blogs->content }}</textarea>
                                     </div>
                                     <div class="form-group">
                                         <label for="Categorie">Category</label>

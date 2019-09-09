@@ -126,7 +126,7 @@
                 </ul>
              --}}
             <li>
-                <a href="calendar.html">
+                <a href="/admin/calender">
                     <span aria-hidden="true" class="icon icon_calendar"></span>
                     <span class="nav-label">Calendar</span>
                 </a>
@@ -142,63 +142,22 @@
                     <ul class="sub-menu">
                         
                         <li>
-                            <a href="#">
+                            <a href="/admin/user">
                                 <span class="nav-label">User</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <span class="nav-label">Role</span>
+                                <span class="nav-label">Log Activity</span>
                             </a>
                         </li>
-                        <li>
-                                <a href="#">
-                                    <span class="nav-label">Location</span>
-                                </a>
-                            </li>
-                        <li>
-                                <a href="#">
-                                    <span class="nav-label">Log Activity</span>
-                                </a>
-                            </li>
                     </ul>
-                </li>
-                {{-- <li  class="nav-dashboards">
-                    <a href="#">
-                        <span aria-hidden="true" class="icon icon_cog"></span>
-                        <span class="nav-label">Customize</span>
-                        <span class="fa arrow_carrot-down_alt2 "></span>
-                    </a>
-                    <ul class="sub-menu">
-                        
-                        <li>
-                            <a href="#">
-                                <span class="nav-label">General</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="nav-label">Topbar</span>
-                            </a>
-                        </li>
-                        <li>
-                                <a href="#">
-                                    <span class="nav-label">Slider-Carousel</span>
-                                </a>
-                            </li>
-                        <li>
-                                <a href="#">
-                                    <span class="nav-label">Log Activity</span>
-                                </a>
-                            </li>
-                    </ul>
-                </li>
-                --}}
+                </li>                
             <li> 
                 <a href="help.html">
                     <span aria-hidden="true" class="icon icon_lifesaver"></span>
                     <span class="nav-label">Help</span>
-                    <span class="badge badge-new">NEW</span>
+                    {{-- <span class="badge badge-new">NEW</span> --}}
                 </a>
             </li>
         </ul>

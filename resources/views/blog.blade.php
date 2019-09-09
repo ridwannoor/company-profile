@@ -21,7 +21,10 @@
                                 <div class="post-content">
     
                                     <h2 class="font-weight-semibold text-5 line-height-6 mt-3 mb-2"><a href="/blog/detail/{{ $blog->id }}">{{ $blog->title }}</a></h2>
-                                    <p>{{ $blog->content }}</p>
+                                    <p>
+                                        {{ str_limit(strip_tags($blog->content), 100) }} 
+                                            
+                                        </p>
     
                                     <div class="post-meta">
                                         <span><i class="far fa-user"></i> By <a href="#">{{ $blog->user->name }}</a> </span>
