@@ -40,8 +40,6 @@
                                                         <td></td>
                                                         <td width='50px'>
                                                             <div class="btn-group">
-                                                                <a href="/admin/user/role/{{$t->id}}"
-                                                                    class="btn btn-primary">Job</a>
                                                                 <a href="/admin/user/edit/{{$t->id}}"
                                                                     class="btn btn-warning">Edit</a>
                                                                 <a href="/admin/user/destroy/{{$t->id}}"

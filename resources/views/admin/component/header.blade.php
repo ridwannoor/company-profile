@@ -185,14 +185,16 @@
             </div>
             <div class="user-container dropdown">
                 <div class="dropdown-toggle" id="dropdownMenu-user" data-toggle="dropdown" aria-expanded="true" role="button">
-                    <img src="{{ asset('admin/assets/images/profiles/profile-3.png') }}" alt="" />
+                    {{-- <img src="{{ asset('admin/assets/images/profiles/profile-3.png') }}" alt="" /> --}}
+                    {{-- <label for="">{{ Auth::user()->name }}</label> --}}
+                    <span>{{ Auth::user()->name }}  </span>
                 </div>
                 <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu-user" >
                     <li><span class="arrow"></span><a role="menuitem" href="/profile"><span class="pe-icon pe-7s-user icon"></span>My Account</a></li>
                     {{-- <li><a role="menuitem" href="pricing.html"><span class="pe-icon pe-7s-paper-plane icon"></span>Upgrade Plan</a></li> --}}
                     <li>
                         <a role="menuitem" href="{{ route('logout') }}" onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">
+                        document.getElementById('logout-form').submit();">  
                         <span class="pe-icon pe-7s-power icon"></span>Sign Out</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf

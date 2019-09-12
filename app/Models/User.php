@@ -18,6 +18,7 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $table = 'users';
     protected $fillable = [
         'name', 
         'email', 
@@ -66,5 +67,10 @@ class User extends Authenticatable
     public function scopeAdmin($query)
     {
         return $query->where('is_admin', true);
+    }
+
+    public function roles()
+    {
+        return $this->belongsToMany('App\Models\Role','user_role','user_id','role_id')->withTimestamps();
     }
 }

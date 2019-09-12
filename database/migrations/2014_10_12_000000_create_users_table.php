@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('api_token', 50)->nullable();
             $table->boolean('is_admin')->default(false);
             $table->string('reset_key', 10)->nullable();
+            $table->bigInteger('role_id')->unsigned();
             $table->rememberToken();
             $table->timestamps();
         });

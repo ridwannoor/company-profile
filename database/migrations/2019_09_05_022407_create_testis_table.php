@@ -16,7 +16,7 @@ class CreateTestisTable extends Migration
         Schema::create('testis', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('deskripsi');
+            $table->text('deskripsi')->nullable();
             $table->string('image')->nullable();
             $table->boolean('is_published')->default(false);
             $table->timestamps();

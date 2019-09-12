@@ -19,7 +19,12 @@
                 <ul class="sub-menu">
                     <li>
                         <a href="/admin/blog">
-                            <span class="nav-label">Blog</span>
+                            <span class="nav-label">All Blog</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/blog/add">
+                            <span class="nav-label">Add New</span>
                         </a>
                     </li>
                     <li>
@@ -32,6 +37,25 @@
                                 <span class="nav-label">Tag</span>
                             </a>
                         </li>                
+                </ul>
+            </li>
+            <li  class="nav-dashboards">
+                <a href="#">
+                    <span aria-hidden="true" class="icon icon_drive "></span>
+                    <span class="nav-label">Pages</span>
+                    <span class="fa arrow_carrot-down_alt2 "></span>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="#">
+                            <span class="nav-label">All Page</span>
+                        </a>
+                    </li>     
+                    <li>
+                        <a href="#">
+                            <span class="nav-label">Add New</span>
+                        </a>
+                    </li>                
                 </ul>
             </li>
             <li  class="nav-dashboards">
@@ -144,6 +168,16 @@
                         <li>
                             <a href="/admin/user">
                                 <span class="nav-label">User</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/admin/role">
+                                <span class="nav-label">Role</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/admin/permission">
+                                <span class="nav-label">Permission</span>
                             </a>
                         </li>
                         <li>

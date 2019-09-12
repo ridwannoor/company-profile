@@ -17,8 +17,7 @@
                                         {{-- <input type="hidden" name="id" value="{{$gen->id}}" />   --}}
                                         <input type="hidden" name="_method" value="POST" /> 
         
-                                        <fieldset class="fieldset mb-3">
-                                          
+                                        <fieldset class="fieldset mb-3">                                          
                                            <div class="form-group form-row">
                                                 <label class="col-lg-2 col-md-3 col-12 control-label">Name</label>
                                                 <div class="col-lg-10 col-md-9 col-12">
@@ -43,16 +42,18 @@
                                                 <div class="col-lg-10 col-md-9 col-12">
                                                     <input type="password" id="password-confirm" name="password_confirmation" required autocomplete="new-password" class="form-control">
                                                 </div>
-                                            </div>
-                                            <div class="form-group form-row avatar">
-                                                    <figure class="figure col-lg-2 col-md-3 col-12">
-                                                        <img class="rounded img-fluid" src="" alt="" />
-                                                    </figure>
-                                                    <div class="form-inline col-lg-10 col-md-9 col-12">
-                                                        <input type="file" name="image" class="file-uploader float-left">
-                                                    </div>
+                                            </div> 
+                                            <div class="form-group form-row">
+                                                <label class="col-lg-2 col-md-3 col-12 control-label">Role</label>
+                                                <div class="col-lg-10 col-md-9 col-12">
+                                                    <select class="form-control" id="name" name="name" class="form-control">
+                                                        @foreach ($roles as $role)
+                                                            <option>{{ $role->name }}</option>
+                                                        @endforeach
+                                                    </select>
+                                                    {{-- <input type="text" id="name" name="name" class="form-control"> --}}
                                                 </div>
-                                            
+                                            </div>
                                         </fieldset>
                                       
                                         <hr>

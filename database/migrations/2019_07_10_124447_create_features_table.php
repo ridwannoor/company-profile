@@ -16,7 +16,7 @@ class CreateFeaturesTable extends Migration
         Schema::create('features', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title')->nullable();
-            $table->string('deskripsi')->nullable();
+            $table->text('deskripsi')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
         });

@@ -27,6 +27,7 @@ class CreateBlogsTable extends Migration
         Schema::table('blogs', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users');
         });
+        
         Schema::table('blogs', function (Blueprint $table) {
             $table->foreign('categorie_id')->references('id')->on('categories');
         });
@@ -39,6 +40,12 @@ class CreateBlogsTable extends Migration
      */
     public function down()
     {
+        Schema::table('blogs', function (Blueprint $table) {
+            $table->dropForeign(['user_id']);
+        });
+        Schema::table('blogs', function (Blueprint $table) {
+            $table->dropForeign(['categorie_id']);
+        });
         Schema::dropIfExists('blogs');
     }
 }
